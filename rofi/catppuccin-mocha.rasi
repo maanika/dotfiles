@@ -8,7 +8,7 @@
     fg-col2: #f38ba8;
     grey: #6c7086;
     width: 600;
-    font: "JetBrainsMono Nerd Font 18";
+    font: "Hack Nerd Font 11";
 }
 
 element-text, element-icon , mode-switcher {
@@ -18,9 +18,12 @@ element-text, element-icon , mode-switcher {
 
 window {
     height: 360px;
-    border: 3px;
-    border-color: @border-col;
+    border: 1px;
+    border-color: white;
+    border-radius: 10px;
+    transparency: "real";
     background-color: @bg-col;
+    padding: 5px;
 }
 
 mainbox {
@@ -37,6 +40,8 @@ inputbar {
 prompt {
     background-color: @blue;
     padding: 6px;
+    disable-history: false;
+    disable-history: false;
     text-color: @bg-col;
     border-radius: 3px;
     margin: 20px 0px 0px 20px;
@@ -58,8 +63,8 @@ listview {
     border: 0px 0px 0px;
     padding: 6px 0px 0px;
     margin: 10px 0px 0px 20px;
-    columns: 2;
-    lines: 5;
+    columns: 1;
+    lines: 8;
     background-color: @bg-col;
 }
 
