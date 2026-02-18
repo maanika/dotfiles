@@ -17,7 +17,7 @@ case "$chosen" in
         i3-msg exit
         ;;
     Lock)
-        i3lock
+        ~/.config/rofi/lock.sh
         ;;
     Suspend)
         systemctl suspend
