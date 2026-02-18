@@ -1,0 +1,9 @@
+bash dash coreutils grep sed tar gzip unzip wget curl nano
+i3 i3lock
+polybar fonts-font-awesome fonts-hack-nerd-font cmake g++ make libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-ewmh-dev libxcb-icccm4-dev libpulse-dev libjsoncpp-dev
+rofi xclip xdotool
+bluez blueman bluez-tools pulseaudio pulseaudio-module-bluetooth pavucontrol
+playerctl
+picom
+feh scrot maim
+
