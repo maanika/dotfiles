@@ -11,25 +11,36 @@
 
 set $mod Mod4
 
-exec_always feh --bg-scale ~/.config/wallpaper/wallpaper.jpg
+# key mapping
 exec_always --no-startup-id setxkbmap -option caps:escape
+
+# picom
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+
+# set monitors
+exec_always --no-startup-id ~/.config/i3/monitors.sh
+
+# launch polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
+# set wallpaper
+exec_always feh --bg-scale ~/.config/wallpaper/wallpaper.jpg
+
+# maim - screentshots
 bindsym Print exec maim "/home/$USER/Pictures/$(date).jpg"
 bindsym $mod+Print exec maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date).jpg"
 bindsym Shift+Print exec maim --select "/home/$USER/Pictures/$(date).jpg"
 
-#Brightness control: remember to check permissions for brightnessctl
+# Brightness control: remember to check permissions for brightnessctl
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
-## Clipboard Screenshots
+# Clipboard Screenshots
 bindsym Ctrl+Print exec maim | xclip -selection clipboard -t image/png
 bindsym Ctrl+$mod+Print exec maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec maim --select | xclip -selection clipboard -t image/png
 
-# start rofi (a program launcher)
+# rofi bindings
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+space exec --no-startup-id rofi -show combi
 bindsym $mod+Tab exec --no-startup-id rofi -show window
