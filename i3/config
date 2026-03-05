@@ -11,6 +11,14 @@
 
 set $mod Mod4
 
+# windows don't randomly steal focus
+focus_follows_mouse no
+mouse_warping none
+
+# scatchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
 # key mapping
 exec_always --no-startup-id setxkbmap -option caps:escape
 
